@@ -165,7 +165,14 @@ class UsbIp : public wxEvtHandler {
         bool findsession(const wxString &);
         void parsehev(const wxString &);
         bool waitforstate(tStates, long state = 5000);
-        bool send(const wxChar *fmt, ...) ATTRIBUTE_PRINTF_1;
+
+// Compatibility with patched wxWidgets 2.8.12 on Ubuntu
+#ifndef WX_ATTRIBUTE_PRINTF_1
+# ifdef ATTRIBUTE_PRINTF_1
+#  define WX_ATTRIBUTE_PRINTF_1 ATTRIBUTE_PRINTF_1
+# endif
+#endif
+        bool send(const wxChar *fmt, ...) WX_ATTRIBUTE_PRINTF_1;
 
         wxEvtHandler *m_pEvtHandler;
         wxSocketClient *m_pSocketClient;
