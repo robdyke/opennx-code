@@ -242,7 +242,7 @@ CPPFLAGS="$WX_CPPFLAGS $CPPFLAGS"
 CXXFLAGS="$WX_CXXFLAGS $CXXFLAGS"
 AC_LANG_PUSH([C++])
 AC_MSG_CHECKING([for wxLogStream])
-AC_COMPILE_IFELSE([[#include <wx/log.h>
+FE_COMPILE_IFELSE([[#include <wx/log.h>
 wxLogStream s;]],[AC_MSG_RESULT([ok])],[AC_MSG_ERROR([[
 Your wxWidgets does not provide the required wxLogStream class.
 Please reconfigure wxWidgets using the option --enable-std_iostreams
@@ -258,7 +258,7 @@ CPPFLAGS="$WX_CPPFLAGS $CPPFLAGS"
 CXXFLAGS="$WX_CXXFLAGS $CXXFLAGS"
 AC_LANG_PUSH([C++])
 AC_MSG_CHECKING([for advanced wxRegEx])
-AC_COMPILE_IFELSE([[
+FE_COMPILE_IFELSE([[
 #include <wx/string.h>
 #include <wx/regex.h>
 wxRegEx re(wxT("\\\\d+"), wxRE_ADVANCED);
