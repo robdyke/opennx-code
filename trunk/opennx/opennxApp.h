@@ -118,6 +118,7 @@ class opennxApp : public wxApp
         bool m_bAutoLogin;
         bool m_bAutoResume;
         bool m_bKillErrors;
+        bool m_bNoGui;
         LoginDialog *m_pLoginDialog;
 
         bool preInit();
