@@ -127,7 +127,7 @@ $(subtarget)-build-native: $(subtarget)-srcdir
 
 $(subtarget)-patch:
 	$(vpatch)shopt -s nullglob; for p in $(srcdir)/patches/$(subvar)-*.patch ; do \
-		test $(V) = 0 || echo Applying `basename $$p`; \
+		test "$(V)" = "0" || echo Applying `basename $$p`; \
 		patch -p0 < $$p ; \
 	done
 
