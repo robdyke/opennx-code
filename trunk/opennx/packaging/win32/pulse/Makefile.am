@@ -38,7 +38,7 @@ CFG_GENERIC = --prefix=$(TMPDIST) --libdir=$(TMPDIST)/lib --bindir=$(TMPDIST)/bi
 			 --libexecdir=$(TMPDIST)/libexec --sysconfdir=$(TMPDIST)/etc
 
 CFG_speex = --enable-sse --enable-shared --disable-static
-CFG_jsonc = --enable-shared --disable-static
+CFG_jsonc = --enable-shared --disable-static --cache-file=mingw32-config.cache
 CFG_libsndfile = --enable-shared --disable-static --disable-external-libs
 CFG_libsamplerate = --enable-shared --disable-static 
 CFG_pulseaudio = --enable-shared --disable-static --disable-glib2 --disable-openssl --disable-nls
