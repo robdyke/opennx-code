@@ -7,6 +7,7 @@ DIST_SUBDIRS = po docs packaging/win32 packaging/MacOSX
 noinst_PROGRAMS = bin2hdr pulsetest $(TESTXAUTH) $(MACTESTKBD)
 
 bin2hdr_SOURCES = bin2hdr.cpp
+bin2hdr_LDFLAGS = -all-static
 
 bin_PROGRAMS = opennx pconnect $(TRACELOG) $(WATCHREADER) $(WATCHUSBIP) \
 	       $(MACFINDREADER) $(MACUNINSTALL)
