@@ -517,7 +517,7 @@ case $target_os in
             DLLPATH="$ac_cv_dllpath"
             AC_ARG_WITH([wine-iscc],
                         AS_HELP_STRING([--with-wine-iscc=PATH],[Path of ISCC to be run under wine. (mingw32 crossbuild only)]),
-                        [ISCC="$withval"])
+                        [ISCC="$withval"],[AC_CHECK_TOOL([ISCC],[iscc],[])])
             if test -z "$ISCC" ; then
                 AC_MSG_WARN([InnoSetup compiler is missing, therefore no Setup will be built!])
                 SETUP=
