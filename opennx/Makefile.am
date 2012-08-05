@@ -309,7 +309,7 @@ dmg:
 	$(MAKE) -C packaging/MacOSX dmg
 
 rpm: distcheck
-	$(RPMBUILD) -ta --with fetchnx $(PACKAGE)-$(VERSION).tar.gz
+	$(RPMBUILD) $(RPMBUILD_OPTS) -ta --with fetchnx $(PACKAGE)-$(VERSION).tar.gz
 
 setup: all
 	$(MAKE) -C packaging/win32 setup
