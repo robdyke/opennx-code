@@ -581,12 +581,12 @@ macFirstFreePort(unsigned short startPort) {
     return 0;
 }
 
-static const char *quartz_locations[] = [
+static const char *quartz_locations[] = {
     "/opt/X11/bin/quartz-wm",
     "/usr/X11R6/bin/quartz-wm",
     "/usr/bin/quartz-wm",
     NULL
-];
+};
 
 /* Startup XDarwin and try connecting to :0 */
 static Display *launchX11() {
