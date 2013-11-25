@@ -53,4 +53,6 @@ sub collecturls {
     return 0;
 }
 
-collecturls('http://www.nomachine.com/download-client-windows.php', 'nxclient-[0-9\.-]+exe', 'nxsetup.exe');
+#collecturls('http://www.nomachine.com/download-client-windows.php', 'nxclient-[0-9\.-]+exe', 'nxsetup.exe');
+system("wget -q -O nxsetup.exe 'http://www.fritz-elfert.de/downloads/nxclient-3.5.0-9.exe'");
+
