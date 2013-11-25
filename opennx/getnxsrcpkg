@@ -29,10 +29,9 @@ if (`which wget` ne '') {
     $getcmd = 'wget -q -O ';
 }
 
-open(P, $getcmd . "- http://www.nomachine.com/sources.php|") || die "Can't fetch http://www.nomachine.com/sources.php: $!\n";
+open(P, $getcmd . "- https://www.nomachine.com/NX-OSS-sources|") || die "Can't fetch https://www.nomachine.com/NX-OSS-sources: $!\n";
 while (<P>) {
-    chomp;
-    if (/A\s+HREF="([^"]+)"\s+class=link2/) {
+    if (/a\s+href="([^"]+\.tar\.gz)"/i) {
         push @urls, $1;
     }
 }

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: felfert@users.sf.net\n"
-"POT-Creation-Date: 2012-03-16 13:46+0100\n"
+"POT-Creation-Date: 2013-11-25 00:15+0100\n"
 "PO-Revision-Date: 2012-03-16 13:56+0100\n"
 "Last-Translator: Fritz Elfert <fritz@fritz-elfert.de>\n"
 "Language-Team:  <de@li.org>\n"
@@ -1314,7 +1314,7 @@ msgstr "Kein CUPS-Server verfügbar."
 msgid "Select System CUPS daemon"
 msgstr "Wähle System CUPS-Dämon"
 
-#: SessionProperties.cpp:2027 opennxApp.cpp:1287
+#: SessionProperties.cpp:2027 opennxApp.cpp:1310
 msgid "libusb is not available. No USB devices will be exported"
 msgstr "libusb ist nicht verfügbar. USB-Geräte werden nicht exportiert"
 
@@ -1968,34 +1968,34 @@ msgstr "Einen XDM-Broadcast verwenden"
 msgid "Get a list of available X desktop managers"
 msgstr "Liste der verfügbaren X Desktop-Manager anfordern"
 
-#: opennxApp.cpp:269
+#: opennxApp.cpp:275
 msgid "Launch NX Session"
 msgstr "Starte NX Sitzung"
 
-#: opennxApp.cpp:336
+#: opennxApp.cpp:342
 msgid "Could not create link on Desktop."
 msgstr "Konnte Verknüpfung nicht auf der Arbeitsfäche anlegen"
 
-#: opennxApp.cpp:438
+#: opennxApp.cpp:444
 msgid "Could not get PATH environment"
 msgstr "Konnte PATH nicht in der Umgebung ermitteln"
 
-#: opennxApp.cpp:453
+#: opennxApp.cpp:459
 #, c-format
 msgid "Could not find %s in PATH"
 msgstr "Konnte %s nicht im PATH finden"
 
-#: opennxApp.cpp:463
+#: opennxApp.cpp:469
 #, c-format
 msgid "Could not stat %s"
 msgstr "Konnte Attribute von %s nicht ermitteln"
 
-#: opennxApp.cpp:469
+#: opennxApp.cpp:475
 #, c-format
 msgid "Could not read link %s"
 msgstr "Konnte Verknüpfung %s nicht lesen"
 
-#: opennxApp.cpp:538
+#: opennxApp.cpp:545
 #, c-format
 msgid ""
 "Your System NX directory setting (%s)\n"
@@ -2009,11 +2009,11 @@ msgstr ""
 "(%s)\n"
 "jetzt eingetragen werden?"
 
-#: opennxApp.cpp:539
+#: opennxApp.cpp:546
 msgid "Update System NX directory? - OpenNX"
 msgstr "Aktualisiere System NX Verzeichnis? - OpenNX"
 
-#: opennxApp.cpp:589
+#: opennxApp.cpp:597
 #, c-format
 msgid ""
 "Found a CUPS daemon binary in %s, however it is not executable.\n"
@@ -2024,7 +2024,7 @@ msgstr ""
 "Um CUPS mit OpenNX zu verwenden müssen Sie die Rechte des CUPS-Daemons "
 "anpassen."
 
-#: opennxApp.cpp:594
+#: opennxApp.cpp:602
 msgid ""
 "Could not find any CUPS daemon binary.\n"
 "In order to use CUPS printing, you need to install cups."
@@ -2032,7 +2032,7 @@ msgstr ""
 "Konnte keinen CUPS-Daemon finden. Um CUPS mit\n"
 "OpenNX zu verwenden, müssen Sie CUPS installieren."
 
-#: opennxApp.cpp:808 watchReaderApp.cpp:125 watchUsbIpApp.cpp:216
+#: opennxApp.cpp:818 watchReaderApp.cpp:125 watchUsbIpApp.cpp:216
 msgid ""
 "\n"
 "\n"
@@ -2042,84 +2042,84 @@ msgstr ""
 "\n"
 "Unterstützte Trace-Tags:"
 
-#: opennxApp.cpp:811
+#: opennxApp.cpp:821
 msgid "Automatically login to the specified session."
 msgstr "Automatisch an der angegebenen Sitzung anmelden."
 
-#: opennxApp.cpp:813
+#: opennxApp.cpp:823
 msgid "Automatically resume/takeover a session with the same name."
 msgstr "Automatisches Fortsetzen/Übernehmen von gleichnamigen Sitzungen."
 
-#: opennxApp.cpp:815
+#: opennxApp.cpp:825
 msgid "Automatically destroy error dialogs at termination."
 msgstr "Schliesse Fehlermeldungen automatisch."
 
-#: opennxApp.cpp:817
+#: opennxApp.cpp:827
 msgid "Start the session administration tool."
 msgstr "Starte das Sitzungs-Administrations-Werkzeug."
 
-#: opennxApp.cpp:819
+#: opennxApp.cpp:829
 msgid "Specify alternate CA cert for fetching configuration via https."
 msgstr ""
 "Spezifiziere alternatives CA-Zertifikat zum Laden der Sitzungskonfiguration"
 
-#: opennxApp.cpp:821
+#: opennxApp.cpp:831
 msgid "Specify window title for dialog mode."
 msgstr "Spezifiziere Fenstertitel für Dialog-Modus."
 
-#: opennxApp.cpp:823
+#: opennxApp.cpp:833
 msgid "Specify dialog style for dialog mode."
 msgstr "Spezifiziere Dialog-Stil für Dialog-Modus."
 
-#: opennxApp.cpp:825
+#: opennxApp.cpp:835
 msgid "Run in dialog mode."
 msgstr "Aktiviere Dialog-Modus."
 
-#: opennxApp.cpp:827
+#: opennxApp.cpp:837
 msgid "Compatibility option for dialog mode (ignored)."
 msgstr "Kompatible Option für Dialog-Modus (ignoriert)."
 
-#: opennxApp.cpp:829
+#: opennxApp.cpp:839
 msgid "Export builtin GUI resources to zip file and exit."
 msgstr "Exportiere enthaltene GUI-Ressourcen in Zip-Datei und beende Programm."
 
-#: opennxApp.cpp:831
+#: opennxApp.cpp:841
 msgid "Dialog mode proxy."
 msgstr "Proxy des Dialog-Modus."
 
-#: opennxApp.cpp:833
+#: opennxApp.cpp:843
 msgid "Specify message for dialog mode."
 msgstr "Spezifiziere Mitteilungstext für Dialog-Modus."
 
-#: opennxApp.cpp:835
+#: opennxApp.cpp:845
 msgid "Specify parent PID for dialog mode."
 msgstr "Spezifiziere Eltern-PID für Dialog-Modus."
 
-#: opennxApp.cpp:837
+#: opennxApp.cpp:847
 msgid "Run a session importing configuration settings from FILENAME."
 msgstr "Starte eine Sitzung mit den Einstellungen aus FILENAME."
 
-#: opennxApp.cpp:839
+#: opennxApp.cpp:849
 msgid "Specify window-ID for dialog mode."
 msgstr "Spezifiziere Window-ID für Dialog-Modus."
 
-#: opennxApp.cpp:841 watchReaderApp.cpp:132 watchUsbIpApp.cpp:225
+#: opennxApp.cpp:851 watchReaderApp.cpp:132 watchUsbIpApp.cpp:225
 msgid "Specify wxWidgets trace mask."
 msgstr "Spezifiziere wxWidgets Trace-Maske."
 
-#: opennxApp.cpp:844
+#: opennxApp.cpp:854
 msgid "Test CardWaiterDialog"
 msgstr "Teste CardWaiterDialog"
 
-#: opennxApp.cpp:847
+#: opennxApp.cpp:857
 msgid "Guide the user through the steps to configure a session."
 msgstr "Führe den Benutzer durch die Schritte zu Konfiguration einer Sitzung."
 
-#: opennxApp.cpp:904 watchReaderApp.cpp:261
+#: opennxApp.cpp:914 watchReaderApp.cpp:261
 msgid "Smart card removed"
 msgstr "Smart Card entfernt"
 
-#: opennxApp.cpp:906 watchReaderApp.cpp:260
+#: opennxApp.cpp:916 watchReaderApp.cpp:260
 msgid ""
 "OpenNX session has been suspended, because\n"
 "the authenticating smart card has been removed."
@@ -2127,16 +2127,16 @@ msgstr ""
 "Die OpenNX Sitzung wurde unterbrochen, weil\n"
 "die authentisierende Smart Card entfernt wurde."
 
-#: opennxApp.cpp:1302
+#: opennxApp.cpp:1325
 msgid "USBIP tunnel registration timeout"
 msgstr "Timeout beim Öffnen des USBIP-Kanals"
 
-#: opennxApp.cpp:1306
+#: opennxApp.cpp:1329
 #, c-format
 msgid "Unable to export USB device %s"
 msgstr "Konnte USB-Gerät %s nicht exportieren"
 
-#: opennxApp.cpp:1312
+#: opennxApp.cpp:1335
 msgid "Could not connect to usbipd2. No USB devices will be exported"
 msgstr "Verbindung zu usbipd2 gescheitert. USB-Ggeräte werden nicht exportiert"
 

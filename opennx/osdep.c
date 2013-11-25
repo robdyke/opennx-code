@@ -581,10 +581,19 @@ macFirstFreePort(unsigned short startPort) {
     return 0;
 }
 
+static const char *quartz_locations[] = [
+    "/opt/X11/bin/quartz-wm",
+    "/usr/X11R6/bin/quartz-wm",
+    "/usr/bin/quartz-wm",
+    NULL
+];
+
 /* Startup XDarwin and try connecting to :0 */
 static Display *launchX11() {
     Display *ret = NULL;
     time_t ts = time(NULL) + 15; /* Wait 15sec for X startup */
+    const char **qlptr;
+    char qcmd[64];
     system("/usr/X11R6/bin/X :0 -nolisten tcp &");
     while (!ret) {
         ret = XOpenDisplay(":0");
@@ -597,15 +606,13 @@ static Display *launchX11() {
     putenv("DISPLAY=:0");
     /* If the following fails, there is usually a WM already running
      * so we don't care ... */
-    if (0 == access("/usr/X11R6/bin/quartz-wm", X_OK)) {
-        system("/usr/X11R6/bin/quartz-wm &");
-        return ret;
+    for (qlptr = quartz_locations; *qlptr, ++qlptr) {
+        if (0 == access(qlptr, X_OK)) {
+            snprintf(qcmd, sizeof(qcmd), "%s &", qlptr);
+            system(qcmd);
+            return ret;
+        }
     }
-    if (0 == access("/usr/bin/quartz-wm", X_OK)) {
-        system("/usr/bin/quartz-wm &");
-        return ret;
-    }
-    system("quartz-wm &");
     return ret;
 }
 # endif /* __WXMAC__ */
