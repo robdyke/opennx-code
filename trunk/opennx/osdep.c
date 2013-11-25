@@ -606,7 +606,7 @@ static Display *launchX11() {
     putenv("DISPLAY=:0");
     /* If the following fails, there is usually a WM already running
      * so we don't care ... */
-    for (qlptr = quartz_locations; *qlptr, ++qlptr) {
+    for (qlptr = quartz_locations; *qlptr; ++qlptr) {
         if (0 == access(qlptr, X_OK)) {
             snprintf(qcmd, sizeof(qcmd), "%s &", qlptr);
             system(qcmd);
