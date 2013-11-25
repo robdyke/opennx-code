@@ -105,7 +105,11 @@ BuildRequires: libusb-devel
 BuildRequires: gcc-c++
 BuildRequires: zip
 BuildRequires: libpng-devel
+%if 0%{?fedora} > 18
+BuildRequires: libjpeg-turbo-devel
+%else
 BuildRequires: libjpeg-devel
+%endif
 BuildRequires: zlib-devel
 BuildRequires: openssl-devel
 BuildRequires: libcurl-devel

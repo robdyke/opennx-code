@@ -43,7 +43,15 @@ sub vcmp($$) {
 
 # Check for installed X11
 my $x11 = 0;
-$x11 = 1 if ((-x '/usr/X11R6/bin/X') && ((-x '/usr/X11R6/bin/quartz-wm') || (-x '/usr/bin/quartz-wm')));
+my @chklocations = (
+    '/usr/X11R6/bin/X',
+    '/usr/X11R6/bin/quartz-wm',
+    '/usr/bin/quartz-wm',
+    '/opt/X11/bin/quartz-wm'
+);
+foreach (@chklocations) {
+    $x11 = 1 if (-x $_);
+}
 exit(113) unless ($x11);
 
 # Check for any running processes

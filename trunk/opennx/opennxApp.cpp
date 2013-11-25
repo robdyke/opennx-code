@@ -95,13 +95,18 @@ IMPLEMENT_APP(opennxApp);
     ,m_pCfg(NULL)
     ,m_pSessionCfg(NULL)
     ,m_nNxSshPID(-1)
+    ,m_nOtherPID(-1)
+    ,m_nWindowID(0)
+    ,m_iDialogStyle(0)
     ,m_iReader(-1)
+    ,m_eMode(MODE_INVALID)
     ,m_bNxSmartCardSupport(false)
     ,m_bRunproc(false)
     ,m_bLibUSBAvailable(false)
     ,m_bRequireWatchReader(false)
     ,m_bRequireStartUsbIp(false)
     ,m_bTestCardWaiter(false)
+    ,m_bNxProxyAvailable(false)
     ,m_bAutoLogin(false)
     ,m_bAutoResume(false)
     ,m_bKillErrors(false)
@@ -1413,6 +1418,7 @@ int opennxApp::OnExit()
 
 void opennxApp::SetSessionCfg(MyXmlConfig &cfg)
 {
+    delete m_pSessionCfg;
     m_pSessionCfg = new MyXmlConfig();
     *m_pSessionCfg = cfg;
     m_pSessionCfg->sSetFileName(cfg.sGetFileName());
