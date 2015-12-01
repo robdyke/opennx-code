@@ -13,7 +13,7 @@ ROOT_DIR="$PWD"
 OUT_DIR="opennx"
 
 # VARS
-MIRROR=http://vorboss.dl.sourceforge.net/project/opennx/opennx/CI-source/opennx-0.16.0.729.tar.gz
+MIRROR=https://github.com/robdyke/opennx-code/archive/master.zip
 
 # Build-essential
 sudo apt-get install build-essential automake -y
@@ -28,10 +28,10 @@ mkdir -p ${OUT_DIR} && cd ${OUT_DIR}
 wget $MIRROR
 
 # Extract Source
-tar zxvf opennx-0.16.0.729.tar.gz
+unzip master.zip
 
 # Switch dir
-cd opennx-0.16
+cd opennx-code-master
 
 # Build from source
 ./configure
